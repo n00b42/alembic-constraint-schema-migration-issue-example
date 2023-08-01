@@ -1,0 +1,16 @@
+[project]
+requires-python = '==3.11'
+
+[tool.poetry]
+name = "test"
+version = "0.1.0"
+description = "A"
+authors = ["A"]
+license = "Prop"
+
+[tool.poetry.dependencies]
+alembic = "^1.11.1"
+psycopg2-binary = "^2.9.6"
+python = "^3.11"
+sqlalchemy = "^2.0.19"
+
