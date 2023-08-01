@@ -6,24 +6,6 @@ from sqlalchemy.orm import DeclarativeBase
 
 ################################################################################
 
-# Test Data
-
-# CREATE USER legacy WITH PASSWORD 'legacy';
-# CREATE DATABASE mydatabase WITH OWNER legacy;
-# GRANT ALL PRIVILEGES ON DATABASE mydatabase to legacy;
-# \c mydatabase
-# CREATE TABLE users (id int PRIMARY KEY, name varchar NOT NULL);
-# INSERT INTO users VALUES (1, 'Aaa'), (2, 'Bbb');
-# CREATE USER myuser WITH PASSWORD 'myuser';
-# CREATE SCHEMA myschema AUTHORIZATION myuser;
-# GRANT REFERENCES (id) ON public.users TO myuser;
-
-# Idea
-# There is a legacy read-only application using schema "public"
-# Another application wants to have foreign key constraints on the legacy user table
-
-################################################################################
-
 myengine = create_engine(f"postgresql://myuser:myuser@localhost:5432/mydatabase")
 
 LEGACY_SCHEMA = "public"
